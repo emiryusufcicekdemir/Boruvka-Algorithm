@@ -1,17 +1,17 @@
 # Boruvka-Algorithm
 
-Borůvka algoritması, minimum kesici ağacı (minimum spanning tree) oluşturmak için kullanılan bir graf algoritmasıdır. Algoritma, 1926 yılında Çek matematikçi Otakar Borůvka tarafından geliştirilmiştir.
+The Borůvka algorithm is a graph algorithm used to construct the minimum spanning tree. The algorithm was developed by Czech mathematician Otakar Borůvka in 1926.
 
-Bir grafın minimum kesici ağacı, grafın tüm düğümlerini ve bu düğümler arasındaki en az maliyetli bağlantıları içeren bir ağaçtır. Borůvka algoritması, bu ağacı oluşturmak için iteratif bir yaklaşım kullanır. Algoritmanın temel mantığı, grafı küçük alt parçalara ayırmak ve her bir parça için minimum maliyetli kenarı seçmektir.
+The minimum cutter tree of a graph is a tree that contains all the nodes of the graph and the least costly connections between these nodes. The Borůvka algorithm uses an iterative approach to construct this tree. The basic logic of the algorithm is to divide the graph into small sub-segments and choose the edge with the minimum cost for each segment.
 
-Borůvka algoritması, özellikle büyük grafiklerde etkilidir, çünkü her adımda birçok düğüm işleme alınır ve bu nedenle paralelleştirilmesi kolaydır. Ancak, daha yavaş büyüyen grafiklerde daha az etkili olabilir.
+The Borůvka algorithm is especially effective on large graphs because many nodes are processed at each step and therefore easy to parallelize. However, it may be less effective on slower growing charts.
 
-Borůvka algoritması, minimum kesici ağaç probleminin yanı sıra, veri sıkıştırma, DNA sekanslama ve diğer birçok alanda kullanılan çeşitli problemlerin çözümünde de kullanılır.
+Besides the minimum cutter tree problem, the Borůvka algorithm is also used in solving various problems used in data compression, DNA sequencing and many other areas.
 
-Algoritmanın çalışma zamanı, grafın düğüm sayısı n ve kenar sayısı m olduğunda, O(m log n) olarak ifade edilebilir. En iyi durum, grafin tamamen birleşik olduğu durumdur, bu durumda algoritmanın çalışma zamanı O(m) olacaktır. En kötü durum, grafin tüm kenarlarının birbirinden bağımsız olduğu durumdur ve bu durumda algoritmanın çalışma zamanı O(m log n) olacaktır.
+The runtime of the algorithm can be expressed as O(m log n) when the number of nodes of the graph is n and the number of edges is m. The best case is when the graph is fully concatenated, in which case the runtime of the algorithm will be O(m). The worst case is when all edges of the graph are independent of each other, and in this case the runtime of the algorithm will be O(m log n).
 
-Ortalama durumda, algoritmanın çalışma zamanı, O(m log n) ile O(m log^2 n) arasında değişebilir.
+In the average case, the runtime of the algorithm can range from O(m log n) to O(m log^2 n).
 
-Boruvka algoritmasının çalışma zamanı, en az kenar sayısı kadar bir alt sınır ve n^2 kadar bir üst sınır ile sınırlıdır. Alt sınır, çünkü en azından tüm kenarları incelemek gereklidir. Üst sınır ise, her bir iterasyonda en az bir kenar seçildiğinden dolayı n^2 olur.
+The running time of Boruvka algorithm is limited by a lower bound of at least the number of edges and an upper bound of n^2. The lower limit, because it is necessary to at least examine all the edges. The upper bound is n^2 since at least one edge is selected in each iteration.
 
-Boruvka algoritmasının çalışma zamanı, grafın yapısına bağlıdır. Eğer graf birbirine bağlıysa, algoritma çok hızlı çalışabilir. Ancak graf çoklu bağlantılara sahipse, algoritmanın performansı düşebilir. Bu nedenle, algoritmanın uygulanacağı graf yapısı göz önünde bulundurulmalıdır.
+The running time of the Boruvka algorithm depends on the structure of the graph. If the graphs are connected, the algorithm can run very fast. However, if the graph has multiple connections, the performance of the algorithm may degrade. Therefore, the graph structure to which the algorithm will be applied should be considered.
